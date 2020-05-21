@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', (e) => {
     console.log(e.target);
-    
     if (e.target === burger || e.target.parentElement === burger) {
       if (document.documentElement.clientWidth > 767) {
         if (burger.classList.contains('active')) {
