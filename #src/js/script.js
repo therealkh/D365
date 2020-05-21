@@ -25,14 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     } else if (e.target !== nav && e.target.parentElement !== nav && e.target !== menu && e.target.parentElement !== menu) {
-      e.preventDefault();
       if (document.documentElement.clientWidth > 767) {
         if (burger.classList.contains('active')) {
+          e.preventDefault();
           nav.classList.remove('active');
           burger.classList.remove('active');
         }
       } else {
         if (burger.classList.contains('active')) {
+          e.preventDefault();
           menu.classList.remove('active');
           burger.classList.remove('active');
         }
