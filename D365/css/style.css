@@ -2,13 +2,13 @@ body {
   font-family: 'Montserrat';
 }
 
-body a:not(.header__logo__link) {
+body a:not(.header__logo__link):not(.socials_) {
   text-decoration: none;
   color: #393185;
   border-bottom: 2px solid transparent;
 }
 
-body a:not(.header__logo__link):hover {
+body a:not(.header__logo__link):not(.socials_):hover {
   color: #393185;
   text-decoration: none;
   border-bottom: 2px solid #FF9900;
@@ -302,34 +302,13 @@ body ul {
   display: flex;
   height: 100%;
   width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.footer-items-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 8.68056%;
-}
-
-.footer-items-nav__link {
-  font-size: 16px;
-  position: relative;
-  margin-right: 40px;
-  line-height: 1;
-}
-
-.footer-items-nav__link:last-child {
-  margin-right: 0;
-}
-
-.footer-items-nav__link span {
-  color: #FF9900;
-}
-
-.footer-items__row1 {
+.footer-items__row1_ {
   width: 100%;
   height: 96px;
   -webkit-box-align: center;
@@ -343,8 +322,49 @@ body ul {
           justify-content: space-between;
 }
 
+.footer-items__row1__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-items__row1__nav__link {
+  font-size: 16px;
+  position: relative;
+  margin-right: 40px;
+  line-height: 1;
+}
+
+.footer-items__row1__nav__link:last-child {
+  margin-right: 0;
+}
+
+.footer-items__row1__nav__link span {
+  color: #FF9900;
+}
+
+.footer-items__row1__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .footer-items__row1__phone_ {
-  display: block;
   position: relative;
   line-height: 1;
 }
@@ -375,6 +395,72 @@ body ul {
 
 .footer-items__row1__phone_:nth-child(2):before {
   background-image: url(../img/smartphone.svg);
+}
+
+.footer-items hr {
+  height: 2px;
+  width: 100vw;
+  margin: 0;
+  background-color: #E0E0E0;
+  display: block;
+}
+
+.footer-items__row2_ {
+  width: 100%;
+  height: 34px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-items__row2_ .copy span {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #828282;
+}
+
+.footer-items__row2_ .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-items__row2_ .socials_ {
+  display: block;
+  width: 24px;
+  height: 24px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.footer-items__row2_ .socials_:nth-child(1) {
+  margin-right: 20px;
+  background-image: url("../img/facebook.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.footer-items__row2_ .socials_:nth-child(2) {
+  background-image: url("../img/instagram.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.footer-items__row2_ .socials_:hover {
+  -webkit-transform: rotate(360deg) scale(1.2);
+      -ms-transform: rotate(360deg) scale(1.2);
+          transform: rotate(360deg) scale(1.2);
 }
 
 @font-face {
@@ -465,9 +551,8 @@ body ul {
     width: 100px;
   }
 
-  .footer__row1 .footer-items__menu-nav {
-    position: static !important;
-    background-color: #fff;
+  .footer-items__row1__nav {
+    display: none;
   }
 }
 
@@ -551,6 +636,10 @@ body ul {
 
   .header-items__logo {
     justify-self: start;
+  }
+
+  .footer-items__row2_ .copy span {
+    font-size: 10px;
   }
 }
 
