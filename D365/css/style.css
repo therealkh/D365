@@ -672,12 +672,15 @@ body ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 44px;
   }
 
   .header-items__menu__lang {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 20px;
+    margin-top: 20px;
   }
 
   .header-items__menu__lang_:nth-child(1) {

@@ -324,9 +324,12 @@ body {
 
 				&__cabinet {
 					justify-content: center;
+					height: 44px;
 				}
 				&__lang{
 					justify-content: center;
+					height: 20px;
+					margin-top: 20px;
 					&_:nth-child(1) {
 						margin: 0 10px 0 0;
 					}
