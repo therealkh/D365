@@ -146,8 +146,7 @@ body {
 		&__burger{
 			cursor: pointer;
 			position: relative;
-			width: 24px;
-			margin-right: 16px;
+			width: 80px;
 			display: none;
 			&_{
 				display: block;
@@ -157,18 +156,19 @@ body {
 				background-color: $col_orange;
 				transition: all 0.3s;
 				&:nth-child(1){
-					left: 0;
+					left: 50%;
 					top: 50%;
-					transform: translateY(-6px);
+					transform: translateX(-50%) translateY(-6px);
 				}
 				&:nth-child(2){
-					left: 0;
+					left: 50%;
 					top: 50% ;
+					transform: translateX(-50%);
 				}
 				&:nth-child(3){
-					left: 0;
+					left: 50%;
 					top: 50%;
-					transform: translateY(+6px);
+					transform: translateX(-50%) translateY(+6px);
 				}
 			}
 			&.active {
@@ -176,16 +176,16 @@ body {
 					background-color: $col_violet;
 
 					&:nth-child(1) {
-						transform: rotate(225deg);
+						transform: translateX(-50%) rotate(225deg);
 					}
 
 					&:nth-child(2) {
-						transform: rotate(180deg);
+						transform: translateX(-50%) rotate(180deg);
 						opacity: 0;
 					}
 
 					&:nth-child(3) {
-						transform: rotate(-45deg);
+						transform: translateX(-50%) rotate(-45deg);
 					}
 				}
 			}
@@ -241,7 +241,6 @@ body {
 			z-index: 10;
 			&__burger{
 				display: block;
-				margin-right: 30px;
 			}
 			&__menu{
 				

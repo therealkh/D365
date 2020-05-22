@@ -171,8 +171,7 @@ body ul {
 .header-items__burger {
   cursor: pointer;
   position: relative;
-  width: 24px;
-  margin-right: 16px;
+  width: 80px;
   display: none;
 }
 
@@ -188,24 +187,27 @@ body ul {
 }
 
 .header-items__burger_:nth-child(1) {
-  left: 0;
+  left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-6px);
-      -ms-transform: translateY(-6px);
-          transform: translateY(-6px);
+  -webkit-transform: translateX(-50%) translateY(-6px);
+      -ms-transform: translateX(-50%) translateY(-6px);
+          transform: translateX(-50%) translateY(-6px);
 }
 
 .header-items__burger_:nth-child(2) {
-  left: 0;
+  left: 50%;
   top: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .header-items__burger_:nth-child(3) {
-  left: 0;
+  left: 50%;
   top: 50%;
-  -webkit-transform: translateY(6px);
-      -ms-transform: translateY(6px);
-          transform: translateY(6px);
+  -webkit-transform: translateX(-50%) translateY(6px);
+      -ms-transform: translateX(-50%) translateY(6px);
+          transform: translateX(-50%) translateY(6px);
 }
 
 .header-items__burger.active .header-items__burger_ {
@@ -213,22 +215,22 @@ body ul {
 }
 
 .header-items__burger.active .header-items__burger_:nth-child(1) {
-  -webkit-transform: rotate(225deg);
-      -ms-transform: rotate(225deg);
-          transform: rotate(225deg);
+  -webkit-transform: translateX(-50%) rotate(225deg);
+      -ms-transform: translateX(-50%) rotate(225deg);
+          transform: translateX(-50%) rotate(225deg);
 }
 
 .header-items__burger.active .header-items__burger_:nth-child(2) {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: translateX(-50%) rotate(180deg);
+      -ms-transform: translateX(-50%) rotate(180deg);
+          transform: translateX(-50%) rotate(180deg);
   opacity: 0;
 }
 
 .header-items__burger.active .header-items__burger_:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+      -ms-transform: translateX(-50%) rotate(-45deg);
+          transform: translateX(-50%) rotate(-45deg);
 }
 
 .header-items__logo {
@@ -554,7 +556,6 @@ body ul {
 
   .header-items__burger {
     display: block;
-    margin-right: 30px;
   }
 
   .header-items__menu-nav {
