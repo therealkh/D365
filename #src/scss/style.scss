@@ -8,6 +8,9 @@ $bg_gray:	#F1F4F5;
 $search_placeholder: #BDBDBD;
 $gradient_main: linear-gradient(62.54deg, #424C9F 11.46%, #811A82 88.56%);
 
+*{
+	outline: none;
+}
 
 body {
   font-family: 'Montserrat';
@@ -576,14 +579,62 @@ body {
 				@media (max-width: 767px) {
 					margin-bottom: 45px;
 				}
-				background-image: url('../img/slider-bg.jpg');
-				background-position: center center;
-				background-size: cover;
 				// !background-repeat: no-repeat;
 				box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
-				.slider{
+				.slider{//!Слайдер тут
+					/* Лента слайдов */
+					.slick-track {
+						display: flex;
+					}
+					
+					.slick-list {
+						overflow: hidden;
+						height: 100%;
+					}
+					.slick-track{
+						height: 100%;
+					}
+					.slick-dotted{
+						position: relative;
+					}
+					.slick-dots{
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%);
+						bottom: -26px;
+						@media(max-width:767px){
+							bottom: 20px;
+						}
+						display: flex;
+						&>li{
+							list-style: none;
+							&>button{
+								font-size: 0;
+								height: 8px;
+								width: 8px;
+								background-color: $search_placeholder;
+								border-radius: 50%;
+								border: none;
+								outline: none;
+								padding: 0;
+								margin: 0 9px;
+								transition: all 0.2s;
+								box-sizing: content-box;
+							}
+							&.slick-active{
+								&>button{
+									width: 14px;
+									height: 14px;
+									background-color: $col_orange;
+								}
+							}
+						}
+					}
 					height: 100%;
 					.slide{
+						background-image: url('../img/slider-bg.jpg');
+						background-position: center center;
+						background-size: cover; 
 						height: 100%;
 						display: flex;
 						justify-content: flex-start;

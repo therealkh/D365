@@ -8,6 +8,7 @@ let path = {
 	build: {
 		html: project_folder + "/",
 		css: project_folder + "/css/",
+		jslibs: project_folder + "/js/libs",
 		js: project_folder + "/js/",
 		img: project_folder + "/img/",
 		fonts: project_folder + "/fonts/",
@@ -16,6 +17,7 @@ let path = {
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
 		css: source_folder + "/scss/style.scss",
 		js: source_folder + "/js/script.js",
+		jslibs: source_folder + "/js/libs/*.js",
 		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: source_folder + "/fonts/*.ttf",
 	},
@@ -109,6 +111,14 @@ function js() {
 		.pipe(dest(path.build.js))
 		// .pipe(browsersync.stream())
 }
+function jslibs() {
+	console.log('JS libs ported');
+	return src(path.src.jslibs)
+		.pipe(fileinclude())
+		.pipe(dest(path.build.jslibs));
+	
+	// .pipe(browsersync.stream())
+}
 
 function images() {
 	return src(path.src.img)
@@ -200,13 +210,14 @@ function clean(params) {
 	return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, jslibs, css, html, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, /*browserSync*/);
 
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
+exports.jslibs = jslibs;
 exports.css = css;
 exports.html = html;
 exports.build = build;

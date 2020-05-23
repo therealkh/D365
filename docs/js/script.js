@@ -1,7 +1,22 @@
+$(document).ready(function () {
+  $('.slider').slick({
+    slidesToShow: 1,
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+  });
+});
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.getElementById('burger');
   const nav = document.querySelector('.header-items__menu-nav');
   const menu = document.querySelector('.header-items__menu');
+
+  
+
+
+
+
 
 
   document.addEventListener('click', (e) => {
@@ -50,3 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
   };
 });
+
+// $(document).ready(function () {
+  
+// })
