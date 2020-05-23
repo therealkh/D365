@@ -5,6 +5,7 @@ $(document).ready(function () {
     dots: true,
     autoplay: true,
     autoplaySpeed: 4000,
+    touchThreshold: 10
   });
 });
 document.addEventListener('DOMContentLoaded', () => {
