@@ -6,6 +6,8 @@ $col_white: #FFFFFF;
 $footer_gray: #E0E0E0;
 $bg_gray: #F1F4F5;
 $search_placeholder: #BDBDBD;
+$col_gray: #828282;
+$col_darker_gray: #4F4F4F;
 $gradient_main: linear-gradient(62.54deg, #424C9F 11.46%, #811A82 88.56%);
 
 @mixin max-text-lines($n) {
@@ -28,7 +30,7 @@ body {
 	font-family: 'Montserrat';
 	background-color: $bg_gray;
 
-	a:not(.header__logo__link):not(.socials_):not(.top-item) {
+	a:not(.header__logo__link):not(.socials_):not(.top-item):not(.not-a-link) {
 		text-decoration: none;
 		color: $col_violet;
 
@@ -977,6 +979,261 @@ body {
 			}
 		}
 	}
+
+	.new {
+		background-color: $col_white;
+		padding-top: 23px;
+		padding-bottom: 32px;
+
+		&__content {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&>h1 {
+				margin-bottom: 30px;
+			}
+		}
+
+		.new-slider {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+
+			.slick-track {
+				display: flex;
+			}
+
+			.slick-list {
+				overflow: hidden;
+				height: 100%;
+			}
+
+			.slick-track {
+				height: 100%;
+			}
+
+			.slick-dotted {}
+
+			& .slick-dots {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -20px;
+
+				//@media(max-width:767px) {
+				//	bottom: 20px;
+				//}
+
+				display: flex;
+
+				&>li {
+					list-style: none;
+
+					&>button {
+						font-size: 0;
+						height: 8px;
+						width: 8px;
+						background-color: $search_placeholder;
+						border-radius: 50%;
+						border: none;
+						outline: none;
+						padding: 0;
+						margin: 0 9px;
+						transition: all 0.2s;
+						box-sizing: content-box;
+					}
+
+					&.slick-active {
+						&>button {
+							width: 14px;
+							height: 14px;
+							background-color: $col_orange;
+						}
+					}
+				}
+			}
+
+			&__slide {
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		.new-item {
+			display: flex;
+			width: 360px;
+			height: 445px;
+
+			@media(max-width: 991px) {
+				width: 300px;
+				height: 375px;
+			}
+
+			@media(max-width: 767px) {
+				width: 360px;
+				height: 445px;
+			}
+
+			@media(max-width: 400px) {
+				width: 300px;
+				height: 375px;
+			}
+
+			flex-direction: column;
+			justify-content: flex-end;
+			//border: 1px solid red;
+			position: relative;
+			padding-bottom: 10px;
+
+			//&:nth-child(2) {
+			//	margin: 0 30px;
+			//}
+
+			&:hover {
+				.new-item__img {
+					img {
+						transform: scale(1.1) rotate(-3deg);
+
+					}
+				}
+			}
+
+			&__img {
+				width: 100%;
+				height: 220px;
+
+				@media(max-width: 991px) {
+					height: 177px;
+					//width: 289px;
+				}
+
+				@media(max-width: 767px) {
+					height: 220px;
+				}
+
+				@media(max-width: 400px) {
+					height: 177px;
+				}
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&>picture {
+					width: 100%;
+					height: 100%;
+				}
+
+				img {
+					transition: all 0.2s;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: bottom;
+				}
+			}
+
+			&__header {
+				font-weight: bold;
+				font-size: 18px;
+				color: $col_violet;
+				margin: 15px 0;
+
+				@media(max-width: 991px) {
+					font-size: 14px;
+				}
+
+				@media(max-width: 767px) {
+					font-size: 18px;
+				}
+
+				@media(max-width: 400px) {
+					font-size: 14px;
+				}
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			&__date {
+				font-weight: 600;
+				font-size: 14px;
+
+				@media(max-width: 991px) {
+					font-size: 10px;
+				}
+
+				@media(max-width: 767px) {
+					font-size: 14px;
+				}
+
+				@media(max-width: 400px) {
+					font-size: 10px;
+				}
+
+				color: $col_gray;
+				padding-left: 26px;
+				position: relative;
+				margin-bottom: 10px;
+
+				&:before {
+					content: '';
+					display: inline-block;
+					height: 16px;
+					width: 16px;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 0;
+					background-image: url(../img/calendar.svg);
+					background-size: contain;
+					background-position: center center;
+					background-repeat: no-repeat;
+
+				}
+			}
+
+			&__text {
+				font-weight: 600;
+				font-size: 14px;
+
+				@media(max-width: 991px) {
+					font-size: 10px;
+				}
+
+				@media(max-width: 767px) {
+					font-size: 14px;
+				}
+
+				@media(max-width: 400px) {
+					font-size: 10px;
+				}
+
+				color: $col_darker_gray;
+				@include max-text-lines(4);
+				padding: 5px;
+			}
+
+			&__link {
+				align-self: center;
+				color: $col_orange;
+				margin-top: 12px;
+			}
+		}
+	}
+
 
 
 

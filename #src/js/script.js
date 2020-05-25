@@ -38,6 +38,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			]
 		});
 	}
+	if (document.documentElement.clientWidth <= 1200) {
+		$('.new-slider').slick({
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			dots: true,
+			arrows: false,
+			//autoplay: true,
+			autoplaySpeed: 4000,
+			touchThreshold: 10,
+			//centerMode: true
+			responsive: [{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}]
+		});
+	}
 
 
 
