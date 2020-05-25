@@ -1234,6 +1234,243 @@ body {
 		}
 	}
 
+	.rewievs-block {
+		padding: 40px 0;
+		//display: flex;
+
+		&__item {}
+
+		.rewiews-block {
+
+			&__wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				h1 {
+					margin-bottom: 40px;
+				}
+
+				.rewievs-slider {
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					overflow: hidden;
+					position: relative;
+					//padding-bottom: 30px;
+
+					.slick-track {
+						display: flex;
+						padding-bottom: 30px;
+					}
+
+					.slick-list {
+						overflow: hidden;
+						height: 110%;
+					}
+
+					.slick-track {
+						height: 110%;
+					}
+
+
+					.slick-dots {
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%);
+						bottom: 0px;
+
+
+
+						display: flex;
+
+						&>li {
+							list-style: none;
+
+							&>button {
+								font-size: 0;
+								height: 8px;
+								width: 8px;
+								background-color: $search_placeholder;
+								border-radius: 50%;
+								border: none;
+								outline: none;
+								padding: 0;
+								margin: 0 9px;
+								transition: all 0.2s;
+								box-sizing: content-box;
+							}
+
+							&.slick-active {
+								&>button {
+									width: 14px;
+									height: 14px;
+									background-color: $col_orange;
+								}
+							}
+						}
+					}
+
+					&__slide {
+
+						.rewievs-block__item {
+							height: 340px;
+							display: flex;
+							justify-content: center;
+
+
+							align-items: center;
+
+							&__content {
+								width: 358px;
+								height: 302px;
+
+								@media(max-width: 1199px) {
+									width: 290px;
+									height: 273px;
+								}
+
+								@media(max-width: 767px) {
+									width: 358px;
+									height: 302px;
+								}
+
+								@media(max-width: 390px) {
+									width: 290px;
+									height: 273px;
+								}
+
+								box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+								background-color: $col_white;
+								position: relative;
+								padding: 35px 18px;
+
+								&:before {
+									content: '';
+									width: 41px;
+									height: 33px;
+									position: absolute;
+									top: -16px;
+									left: 24px;
+									display: block;
+									background-image: url(../img/quote.svg);
+									background-position: center center;
+									background-size: contain;
+								}
+
+								&:after {
+									content: '';
+									width: 41px;
+									height: 33px;
+									position: absolute;
+									bottom: -16px;
+									transform: rotate(180deg);
+									right: 24px;
+									display: block;
+									background-image: url(../img/quote.svg);
+									background-position: center center;
+									background-size: contain;
+								}
+
+								.executor {
+									text-align: center;
+									font-weight: bold;
+									font-size: 18px;
+									color: $col_violet;
+									line-height: 150%;
+									position: relative;
+									margin-bottom: 30px;
+
+									@media(max-width:1199px) {
+										margin-bottom: 20px;
+									}
+
+									@media(max-width:767px) {
+										margin-bottom: 30px;
+									}
+
+									@media(max-width:390px) {
+										margin-bottom: 20px;
+									}
+
+									&>span {
+										display: block;
+										font-size: 14px;
+									}
+
+									&:after {
+										content: '';
+										width: 55.81px;
+										height: 4px;
+										background-color: $col_orange;
+										position: absolute;
+										bottom: -8px;
+										left: 50%;
+										transform: translateX(-50%);
+									}
+								}
+
+								.rewiev {
+									font-weight: 600;
+									font-size: 14px;
+									margin-bottom: 15px;
+									@include max-text-lines(5);
+
+									@media(max-width:1199px) {
+										@include max-text-lines(6);
+										margin-bottom: 10px;
+										font-size: 12px;
+									}
+
+									@media(max-width:767px) {
+										@include max-text-lines(5);
+										margin-bottom: 15px;
+										font-size: 14px;
+									}
+
+									@media(max-width:390px) {
+										@include max-text-lines(6);
+										margin-bottom: 10px;
+										font-size: 12px;
+									}
+
+									text-align: center;
+									color: $col_darker_gray;
+								}
+
+								.rewiever {
+									font-weight: bold;
+									font-size: 18px;
+
+									@media(max-width:1199px) {
+										font-size: 14px;
+									}
+
+									@media(max-width:767px) {
+										font-size: 18px;
+									}
+
+									@media(max-width:390px) {
+										font-size: 14px;
+									}
+
+									color: $col_purple;
+									text-align: center;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+
+
+
+
 
 
 

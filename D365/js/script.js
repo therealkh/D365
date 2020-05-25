@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			slidesToScroll: 1,
 			dots: true,
 			arrows: false,
-			//autoplay: true,
+			autoplay: true,
 			autoplaySpeed: 4000,
 			touchThreshold: 10,
 			//centerMode: true
@@ -57,6 +57,27 @@ document.addEventListener('DOMContentLoaded', () => {
 			}]
 		});
 	}
+	$('.rewievs-slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		arrows: false,
+		dots: true,
+		responsive: [{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
 
 
 
