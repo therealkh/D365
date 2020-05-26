@@ -412,7 +412,6 @@ body {
 		}
 
 		@media (max-width: 575px) {
-
 			&__lang {
 				display: none;
 			}
@@ -538,7 +537,6 @@ body {
 					}
 
 					&-list {
-
 						&_ {
 							@media(max-width: 767px) {
 								display: flex;
@@ -547,7 +545,6 @@ body {
 							}
 
 							&_item {
-
 								margin-bottom: 30px;
 								padding-left: 36px;
 
@@ -1680,6 +1677,107 @@ body {
 			}
 		}
 	}
+
+	.socials-block {
+		padding: 60px 0;
+		background-image: url(../img/socials-bg.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		&__wrapper {}
+
+		&__header {
+			color: $col_white;
+			font-weight: 800;
+			font-size: 24px;
+
+			@media (max-width: 525px) {
+				font-size: 21px;
+			}
+
+			text-align: center;
+			text-transform: uppercase;
+			text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+		}
+
+		&__btns {
+			display: flex;
+			justify-content: center;
+
+			@media (max-width: 525px) {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
+		&__btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 155px;
+			height: 30px;
+			border: 5px solid $col_orange;
+			box-sizing: content-box;
+			background-color: $col_orange;
+			box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+			border-radius: 47px;
+			color: $col_white;
+			font-weight: bold;
+			font-size: 16px;
+			text-align: center;
+			text-transform: uppercase;
+			margin: 15px;
+			padding-left: 37px;
+			position: relative;
+
+			&:hover {
+				cursor: pointer;
+				color: $col_white;
+
+				&:before {
+					transform: rotate(360deg) scale(1.5);
+					border: 5px solid $col_orange;
+				}
+			}
+
+			&:before {
+				content: '';
+				border: 5px solid transparent;
+				box-sizing: content-box;
+				position: absolute;
+				left: 0;
+				display: block;
+				width: 32px;
+				height: 32px;
+				transition: all 0.2s;
+				border-radius: 50%;
+
+			}
+
+			&.fb {
+				&:before {
+					background: url('../img/facebook.svg');
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+					margin-left: -5px;
+
+				}
+			}
+
+			&.ig {
+				&:before {
+					background: url('../img/instagram.svg');
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+					margin-left: -5px;
+				}
+			}
+
+		}
+	}
 }
 
 .title {
@@ -1856,43 +1954,6 @@ body {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
