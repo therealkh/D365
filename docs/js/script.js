@@ -62,6 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		slidesToScroll: 3,
 		arrows: false,
 		dots: true,
+		autoplay: true,
+		autoplaySpeed: 4000,
+		touchThreshold: 10,
 		responsive: [{
 				breakpoint: 992,
 				settings: {
