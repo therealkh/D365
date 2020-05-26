@@ -43,6 +43,9 @@ body {
 	a:not(.header__logo__link):not(.socials_):not(.top-item):not(.not-a-link) {
 		text-decoration: none;
 		color: $col_violet;
+		box-sizing: content-box;
+		transition: all 0.2s;
+		border-bottom: 2px solid transparent;
 
 		&:hover {
 			color: $col_violet;
@@ -1245,7 +1248,7 @@ body {
 				}
 
 				color: $col_darker_gray;
-				@include max-text-lines(4);
+				@include max-text-lines(3);
 				padding: 5px;
 			}
 

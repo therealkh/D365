@@ -27,6 +27,12 @@ body ::-webkit-scrollbar-thumb {
 body a:not(.header__logo__link):not(.socials_):not(.top-item):not(.not-a-link) {
   text-decoration: none;
   color: #393185;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
 }
 
 body a:not(.header__logo__link):not(.socials_):not(.top-item):not(.not-a-link):hover {
@@ -989,9 +995,9 @@ body button.theme-btn:hover {
      text-overflow: ellipsis;
   display: -moz-box;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  line-clamp: 4;
+  line-clamp: 3;
   box-orient: vertical;
   padding: 5px;
 }
