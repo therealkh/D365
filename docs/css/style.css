@@ -1341,6 +1341,105 @@ body button.theme-btn:hover {
   color: #FF9900;
 }
 
+.main .socials-block {
+  padding: 60px 0;
+  background-image: url(../img/socials-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main .socials-block__header {
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.main .socials-block__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .socials-block__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 155px;
+  height: 30px;
+  border: 5px solid #FF9900;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background-color: #FF9900;
+  -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 47px;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 15px;
+  padding-left: 37px;
+  position: relative;
+}
+
+.main .socials-block__btn:hover {
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.main .socials-block__btn:hover:before {
+  -webkit-transform: rotate(360deg) scale(1.5);
+      -ms-transform: rotate(360deg) scale(1.5);
+          transform: rotate(360deg) scale(1.5);
+  border: 5px solid #FF9900;
+}
+
+.main .socials-block__btn:before {
+  content: '';
+  border: 5px solid transparent;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 50%;
+}
+
+.main .socials-block__btn.fb:before {
+  background: url("../img/facebook.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: -5px;
+}
+
+.main .socials-block__btn.ig:before {
+  background: url("../img/instagram.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: -5px;
+}
+
 .title {
   font-weight: bold;
   color: #284084;
@@ -1992,6 +2091,22 @@ body button.theme-btn:hover {
   }
 }
 
+@media (max-width: 525px) {
+  .main .socials-block__header {
+    font-size: 21px;
+  }
+
+  .main .socials-block__btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media (max-width: 500px) {
   .main .start-block-items .celebrate-content-list__item a {
     font-size: 15px;
@@ -2133,3 +2248,5 @@ body button.theme-btn:hover {
 .webp .main .start-block-items .slider-block .slider .slide{ background-image: url(../img/slider-bg.webp); }
 
 .webp .main .article-block__img{ background-image: url(../img/baloon-logo.webp); }
+
+.webp .main .socials-block{ background-image: url(../img/socials-bg.webp); }

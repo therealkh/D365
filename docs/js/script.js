@@ -81,14 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		]
 	});
-
-
-
-
-
-
-
-
 	document.addEventListener('click', (e) => {
 		console.log(e.target);
 		if (e.target === burger || e.target.parentElement === burger) {
@@ -147,7 +139,3 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	};
 });
-
-// $(document).ready(function () {
-
-// })
